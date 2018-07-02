@@ -38,9 +38,9 @@ export default {
       'total'
     ]),
     ...mapState({
-      productDiscount: state => state.shoppingCart.productDiscount,
-      freeShipping: state => state.shoppingCart.freeShipping,
-      totalDiscount: state => state.shoppingCart.totalDiscount
+      productDiscount: state => state.cart.productDiscount,
+      freeShipping: state => state.cart.freeShipping,
+      totalDiscount: state => state.cart.totalDiscount
     }),
     totalWithDiscount () {
       let total = this.$store.getters.total

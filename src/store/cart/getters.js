@@ -1,4 +1,4 @@
-export const cartMerchant = state => {
+export const cartMerchants = state => {
   return state.cart.added.map(({ id, shipping }) => {
     const merchant = 
       state

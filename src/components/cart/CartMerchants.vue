@@ -21,8 +21,13 @@
 <script>
 import Graph from "./graph.js";
 import CartItem from "./CartItem.vue";
+import { mapGetters, mapState } from 'vuex'
+
 export default {
   name: 'CartMerchants',
+  computed: mapGetters ({
+    merchants: 'cartMerchants'
+  }),
   components:{
     Graph,
     CartItem

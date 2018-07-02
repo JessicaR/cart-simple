@@ -19,10 +19,14 @@ import CartMerchants from './CartMerchants.vue';
 import CartSummary from './CartSummary.vue';
 import CartCheckout from './CartCheckout.vue';
 import CartLists from './CartLists.vue';
+
 import { mapGetters } from 'vuex'
 
 export default {
   name: 'StickyCart',
+  computed: mapGetters({
+    merchants: 'cartMerchants'
+  }),
   components: {
     CartHeader,
     CartMessages,
@@ -30,16 +34,6 @@ export default {
     CartSummary,
     CartCheckout,
     CartLists,
-  },
-   computed: mapGetters({
-    items: 'cartMerchants',
-    orderOnLimit: 'orderOnLimit'
-  }),
-  methods: {
-    buy () {
-      window.alert('You bought :)')
-      window.location.reload()
-    }
   }
 };
 </script>
