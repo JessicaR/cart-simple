@@ -1,7 +1,4 @@
 <template>
-<section class="sc-summary__section">
-  <p class="sc-summary__savings"></p>
-  <p class="sc-summary__subtotal"></p>
   <ul class="list-group">
     <li class="list-group-item">
       Subtotal ({{itemsQuantity}} {{'item' | pluralize(itemsQuantity) }}): {{subtotal | formatMoney}}
@@ -15,6 +12,7 @@
     </li>
 
     <li class="list-group-item">Taxes: {{taxes | formatMoney}}</li>
+
     <li class="list-group-item">
       <strong>Total:</strong>
       <strong v-if="!totalDiscount"> {{total | formatMoney}}</strong>
@@ -24,14 +22,13 @@
       </span>
     </li>
   </ul>
-  </section>
 </template>
 
 <script>
 import { mapGetters, mapState } from 'vuex'
 
 export default {
-  name: 'CartSummary',
+  name: 'ShoppingCartSummary',
   computed: {
     ...mapGetters([
       'itemsQuantity',
@@ -52,4 +49,3 @@ export default {
   }
 }
 </script>
-
